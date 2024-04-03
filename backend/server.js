@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const workoutsRouter = require("./routes/workouts");
+const usersRouter = require("./routes/users");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -17,6 +18,7 @@ app.use(cors());
 
 //Routes
 app.use("/api/workouts", workoutsRouter);
+app.use("/api/user", usersRouter);
 
 //Connect to db
 mongoose
